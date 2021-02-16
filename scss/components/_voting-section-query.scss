@@ -1,0 +1,92 @@
+@media (min-width: 750px) {
+    .voting-section {
+        .announce {
+            flex-direction: row;
+            text-align: initial;
+            align-items: center;
+            padding: 1em 2em;
+
+            .left {
+                width: 30%;
+                margin-right: 0.5em;
+
+                p {
+                    font-size: 1.4rem;
+                }
+
+                h1 {
+                    line-height: 1;
+                }
+            }
+
+            .right {
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .voting-title {
+            text-align: initial;
+        }
+
+        .voting-grid {
+            grid-template-columns: 1fr 1fr;
+
+            .card {
+                .card-container {
+                    .card-content {
+                        .card-actions {
+                            .btn {
+                                &:hover,
+                                &:focus {
+                                    opacity: 0.6;
+
+                                    &.btn-vote {
+                                        background-color: rgba(#fff, 0.1);
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .add-other {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .add-other-text {
+                font-size: 2.5rem;
+                text-align: initial;
+            }
+
+            .btn-submit-other {
+                cursor: pointer;
+                
+                &:hover {
+                    background-color: rgba(#000, 0.2);
+                }
+            }
+        }
+
+        .footer {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .social-media {
+                p {
+                    display: block;
+                }
+
+                .icon {
+                    margin-left: 1em;
+                }
+            }
+        }
+    }
+}

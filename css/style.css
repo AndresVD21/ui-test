@@ -22,13 +22,14 @@ body {
 }
 
 .header-section {
-  background-image: url("../../images/pope.jfif");
+  background-image: url("../../images/pope2.jpg");
+  background-size: cover;
   background-position: top center;
 }
 .header-section .nav {
   display: flex;
   flex-direction: column;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   justify-content: center;
   align-items: center;
   padding: 1em;
@@ -64,7 +65,8 @@ body {
 .header-section .container .info-card .info-card-content {
   padding: 2em;
   color: #fff;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .header-section .container .info-card .info-card-content .info-card-title {
   font-size: 3rem;
@@ -130,16 +132,6 @@ body {
 .header-section .closing-details .closing-in small {
   text-transform: uppercase;
 }
-.header-section .closing-details .closing-in::after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-left: 7px solid rgba(0, 0, 0, 0.4);
-  position: absolute;
-  right: -7px;
-}
 .header-section .closing-details .closing-days {
   width: 70%;
   display: flex;
@@ -153,6 +145,63 @@ body {
   font-weight: 700;
 }
 
+@media (min-width: 750px) {
+  .header-section .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4em 6em;
+  }
+  .header-section .nav .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: initial;
+  }
+  .header-section .nav .nav-list .list-item {
+    margin: 0 1em;
+    cursor: pointer;
+    padding: 0.5em 1em;
+  }
+  .header-section .nav .nav-list .list-item:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .header-section .container {
+    justify-content: flex-start;
+    padding: 0 6em;
+    width: 100%;
+  }
+  .header-section .container .info-card {
+    width: 40%;
+    height: 40%;
+  }
+  .header-section .container .info-card .info-card-content small {
+    font-size: 1.3rem;
+  }
+  .header-section .container .info-card .info-card-content .info-card-title {
+    font-size: 4rem;
+  }
+  .header-section .container .info-card .info-card-content .info-card-text {
+    font-size: 1.5rem;
+  }
+  .header-section .container .info-card .info-card-content .more-info {
+    font-size: 1.2rem;
+  }
+  .header-section .container .info-card .info-card-content strong {
+    font-size: 1.5rem;
+  }
+  .header-section .container .info-card .thumbs [class^=thumbs-] {
+    cursor: pointer;
+  }
+  .header-section .container .info-card .thumbs .thumbs-up:hover {
+    background-color: #2cbab3;
+  }
+  .header-section .container .info-card .thumbs .thumbs-down:hover {
+    background-color: #ffb533;
+  }
+  .header-section .closing-details .closing-in small {
+    font-size: 1rem;
+  }
+}
 .voting-section {
   padding: 2em 0;
   width: 80%;
@@ -184,16 +233,19 @@ body {
 .voting-section .voting-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-columns: 1fr;
   gap: 20px;
 }
 .voting-section .voting-grid .card {
   color: #fff;
   min-height: 400px;
+  min-width: 330px;
   background-position: left center;
   background-size: cover;
   display: flex;
   align-items: flex-end;
+}
+.voting-section .voting-grid .card .card-container {
+  width: 100%;
 }
 .voting-section .voting-grid .card .card-container .card-title {
   display: flex;
@@ -232,6 +284,7 @@ body {
   border: none;
   padding: 0.3em 0.4em;
   color: #fff;
+  cursor: pointer;
 }
 .voting-section .voting-grid .card .card-container .card-content .card-actions .btn + .btn {
   margin-left: 0.5em;
@@ -283,6 +336,15 @@ body {
 .voting-section .voting-grid .card.kanye .card-rating .thumbs-down-rating {
   width: 36%;
 }
+.voting-section .voting-grid .card.mark {
+  background-image: url("../../images/mark2.jpg");
+}
+.voting-section .voting-grid .card.mark .card-rating .thumbs-up-rating {
+  width: 36%;
+}
+.voting-section .voting-grid .card.mark .card-rating .thumbs-down-rating {
+  width: 64%;
+}
 .voting-section .voting-grid .card.cris {
   background-image: url("../../images/cris2.jpg");
 }
@@ -292,11 +354,140 @@ body {
 .voting-section .voting-grid .card.cris .card-rating .thumbs-down-rating {
   width: 64%;
 }
+.voting-section .voting-grid .card.elon {
+  background-image: url("../../images/elon.jpg");
+}
+.voting-section .voting-grid .card.elon .card-rating .thumbs-up-rating {
+  width: 55%;
+}
+.voting-section .voting-grid .card.elon .card-rating .thumbs-down-rating {
+  width: 45%;
+}
+.voting-section .add-other {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5em 0;
+  background-color: lightgray;
+  padding: 1em 2em;
+}
+.voting-section .add-other .add-other-text {
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+}
+.voting-section .add-other .btn-submit-other {
+  background-color: transparent;
+  border: 2px solid #000;
+  font-size: 1.5rem;
+  padding: 0.8em 2em;
+  font-weight: 700;
+}
+.voting-section .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em;
+  background-image: linear-gradient(to right, darkgray 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: top;
+  background-size: 5px 1px;
+  background-repeat: repeat-x;
+}
+.voting-section .footer .links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.voting-section .footer .links .link + .link {
+  margin-left: 1em;
+}
+.voting-section .footer .links .link a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
+}
+.voting-section .footer .links .link a:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+.voting-section .footer .social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+}
+.voting-section .footer .social-media .icon + .icon {
+  margin-left: 1em;
+}
+.voting-section .footer .social-media p {
+  display: none;
+}
+.voting-section .footer .social-media .icon {
+  font-size: 3rem;
+}
 
 .icon {
   font-size: 1.5rem;
 }
 
+@media (min-width: 750px) {
+  .voting-section .announce {
+    flex-direction: row;
+    text-align: initial;
+    align-items: center;
+    padding: 1em 2em;
+  }
+  .voting-section .announce .left {
+    width: 30%;
+    margin-right: 0.5em;
+  }
+  .voting-section .announce .left p {
+    font-size: 1.4rem;
+  }
+  .voting-section .announce .left h1 {
+    line-height: 1;
+  }
+  .voting-section .announce .right p {
+    font-size: 1.2rem;
+  }
+  .voting-section .voting-title {
+    text-align: initial;
+  }
+  .voting-section .voting-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .voting-section .voting-grid .card .card-container .card-content .card-actions .btn:hover, .voting-section .voting-grid .card .card-container .card-content .card-actions .btn:focus {
+    opacity: 0.6;
+  }
+  .voting-section .voting-grid .card .card-container .card-content .card-actions .btn:hover.btn-vote, .voting-section .voting-grid .card .card-container .card-content .card-actions .btn:focus.btn-vote {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .voting-section .add-other {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .voting-section .add-other .add-other-text {
+    font-size: 2.5rem;
+    text-align: initial;
+  }
+  .voting-section .add-other .btn-submit-other {
+    cursor: pointer;
+  }
+  .voting-section .add-other .btn-submit-other:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .voting-section .footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .voting-section .footer .social-media p {
+    display: block;
+  }
+  .voting-section .footer .social-media .icon {
+    margin-left: 1em;
+  }
+}
 .ml-1 {
   margin-left: 1em;
 }

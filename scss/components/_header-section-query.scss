@@ -1,0 +1,88 @@
+@media (min-width: 750px) {
+    .header-section {
+        // min-height: 600px;
+        .nav {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 4em 6em;
+
+            .nav-list {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                text-align: initial;
+
+                .list-item {
+                    margin: 0 1em;
+                    cursor: pointer;
+                    padding: .5em 1em;
+
+                    &:hover {
+                        background-color: rgba(#000, 0.3);
+                    }
+                }
+            }
+        }
+
+        .container {
+            justify-content: flex-start;
+            padding: 0 6em;
+            width: 100%;
+
+            .info-card {
+                width: 40%;
+                height: 40%;
+
+                .info-card-content {
+
+                    small {
+                        font-size: 1.3rem;
+                    }
+
+                    .info-card-title {
+                        font-size: 4rem;
+                    }
+
+                    .info-card-text {
+                        font-size: 1.5rem;
+                    }
+
+                    .more-info {
+                        font-size: 1.2rem;
+                    }
+
+                    strong {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .thumbs {
+
+                    [class^="thumbs-"] {
+                        cursor: pointer;
+                    }
+
+                    .thumbs-up {
+                        &:hover {
+                            background-color: $primary-blue;
+                        }
+                    }
+    
+                    .thumbs-down {
+                        &:hover {
+                            background-color: $primary-yellow;
+                        }
+                    }
+                }
+            }
+        }
+
+        .closing-details {
+            .closing-in {
+                small {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
