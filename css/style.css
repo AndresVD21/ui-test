@@ -421,6 +421,9 @@ body {
 .voting-section .footer .social-media p {
   display: none;
 }
+.voting-section .footer .social-media a {
+  color: #000;
+}
 .voting-section .footer .social-media .icon {
   font-size: 3rem;
 }
@@ -483,6 +486,9 @@ body {
   }
   .voting-section .footer .social-media p {
     display: block;
+  }
+  .voting-section .footer .social-media a:hover, .voting-section .footer .social-media a:focus {
+    opacity: 0.8;
   }
   .voting-section .footer .social-media .icon {
     margin-left: 1em;

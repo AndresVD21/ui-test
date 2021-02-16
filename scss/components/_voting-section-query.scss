@@ -46,7 +46,6 @@
                                         background-color: rgba(#fff, 0.1);
                                     }
                                 }
-
                             }
                         }
                     }
@@ -66,7 +65,7 @@
 
             .btn-submit-other {
                 cursor: pointer;
-                
+
                 &:hover {
                     background-color: rgba(#000, 0.2);
                 }
@@ -81,6 +80,13 @@
             .social-media {
                 p {
                     display: block;
+                }
+
+                a {
+                    &:hover,
+                    &:focus {
+                        opacity: 0.8;
+                    }
                 }
 
                 .icon {
