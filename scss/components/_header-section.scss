@@ -1,0 +1,159 @@
+@import "../abstracts/variables";
+
+.header-section {
+    // min-height: 400px;
+    background-image: url("../../images/pope.jfif");
+    background-position: top center;
+    // padding: 1em;
+    .nav {
+        display: flex;
+        flex-direction: column;
+        color: rgba(#fff, 0.7);
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+
+        .page-title {
+            font-size: 2rem;
+            text-transform: capitalize;
+            font-weight: 400;
+
+            .no-capital {
+                text-transform: lowercase;
+            }
+        }
+
+        .nav-list {
+            list-style: none;
+            text-align: center;
+
+            .list-item {
+                text-transform: capitalize;
+                font-size: 1.5rem;
+
+                .search-icon {
+                    font-size: 1.5rem;
+                }
+            }
+
+        }
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2em;
+
+        .info-card {
+            width: 70%;
+
+            .info-card-content {
+                padding: 2em;
+                color: #fff;
+                backdrop-filter: blur(20px);
+
+                .info-card-title {
+                    font-size: 3rem;
+                    font-weight: 400;
+                    line-height: 1;
+                    margin-bottom: .5em;
+                    letter-spacing: 1px;
+                }
+
+                small {
+                    font-weight: 100;
+                    font-size: 1rem;
+                }
+
+                .info-card-text {
+                    line-height: 1.5;
+                    font-weight: 300;
+                    color: rgba(#fff, 0.7);
+                }
+
+                .more-info {
+                    color: rgba(#fff, 0.7);;
+                    font-size: .8rem;
+                    margin-top: 1em;
+                    margin-bottom: 1.5rem;
+
+                    a {
+                        color: inherit;
+                    }
+                }
+
+            }
+            .thumbs {
+                width: 100%;
+                display: flex;
+
+                .thumbs-up,
+                .thumbs-down {
+                    width: 50%;
+                    margin: 0;
+                    background: none;
+                    border: none;
+                    padding: 1em 1.5em;
+                    color: #fff;
+
+                    i {
+                        font-size: 2rem;
+                    }
+                }
+
+                .thumbs-up {
+                    background-color: $opaque-primary-blue;
+                }
+
+                .thumbs-down {
+                    background-color: $opaque-primary-yellow;
+                }
+            }
+        }
+    }
+
+    .closing-details {
+        display: flex;
+
+        .closing-in {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 30%;
+            background-color: rgba(#000, 0.3);
+            color: #fff;
+            padding: 1em;
+            position: relative;
+
+            small {
+                text-transform: uppercase;
+            }
+
+            &::after {
+                content: '';
+                width: 0;
+                height: 0;
+                border-top: 7px solid transparent;
+                border-bottom: 7px solid transparent;
+                border-left: 7px solid rgba(#000, 0.4);
+                position: absolute;
+                right: -7px;
+            }
+        }
+
+        .closing-days {
+            width: 70%;
+            display: flex;
+            background-color: rgba(#fff, 0.8);
+            font-size: 2rem;
+            color: rgba(#000, 0.7);
+            padding: 0 .5em;
+
+            .number {
+                margin-right: .3em;
+                font-weight: 700;
+            }
+        }
+    }
+}

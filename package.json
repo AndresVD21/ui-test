@@ -1,0 +1,26 @@
+{
+  "name": "ui-test",
+  "version": "1.0.0",
+  "description": "UI Test Zemoga",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "scss": "sass --watch scss/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndresVD21/ui-test.git"
+  },
+  "author": "Andres V",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndresVD21/ui-test/issues"
+  },
+  "homepage": "https://github.com/AndresVD21/ui-test#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "devDependencies": {
+    "sass": "^1.32.7"
+  }
+}

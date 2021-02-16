@@ -1,0 +1,192 @@
+@import "../abstracts/variables";
+
+.voting-section {
+    padding: 2em 0;
+    width: 80%;
+    margin: 0 auto;
+
+    .announce {
+        background-color: $light-grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 1em;
+        color: $opaque-black;
+
+        .left {
+            p {
+                font-size: 1.5rem;
+            }
+            strong h1{
+                font-weight: 900;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .voting-title {
+        margin: .3em 0;
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 400;
+        color: $opaque-black;
+    }
+
+    .voting-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        .card {
+    
+            color: #fff;
+            // width: 70%;
+            min-height: 400px;
+            background-position: left center;
+            background-size: cover;
+            display: flex;
+            align-items: flex-end;
+    
+            
+    
+            .card-container {
+                .card-title {
+                    display: flex;
+                    align-items: center;
+                    .calification {
+                        padding: .5em .6em;
+                        color: #fff;
+                        margin-right: 1em;
+            
+                        &.good {
+                            background-color: $primary-blue;
+                        }
+    
+                        &.bad {
+                            background-color: $primary-yellow;
+                        }
+    
+                        
+                    }
+                    .card-name {
+                        font-size: 3rem;
+                        line-height: 1;
+                        letter-spacing: 2px;
+                    }
+                }
+    
+                .card-content {
+                    padding: 0 3.5em 3.5em 3.5em;
+                    
+                    .card-information {
+                        margin-bottom: 1.2em;
+                    }
+    
+                    .card-description {
+                        font-size: 1.3rem;
+                    }
+    
+                    .card-actions {
+                        padding: 1.2em 0;
+        
+                        .btn {
+                            background-color: transparent;
+                            border: none;
+                            padding: 0.3em 0.4em;
+                            color: #fff;
+        
+                            &+.btn {
+                                margin-left: .5em;
+                            }
+        
+                            &.active {
+                                border: 2px solid #fff;
+                            }
+        
+                            &.thumbs-up {
+                                background-color: $primary-blue;
+                            }
+        
+                            &.thumbs-down {
+                                background-color: $primary-yellow;
+                            }
+        
+                            &.btn-vote {
+                                border: 1px solid #fff;
+                                padding: 1em 1.5em;
+                            }
+        
+                        }
+                    }
+                }
+    
+            }
+    
+            .card-rating {
+                display: flex;
+                width: 100%;
+    
+                .thumbs-up-rating,
+                .thumbs-down-rating {
+                    padding: .5em;
+                    font-size: 2rem;
+                    width: 50%;
+                    display: flex;
+                    align-items: center;
+                    line-height: 1;
+    
+                    .icon {
+                        font-size: 2rem;
+                    }
+                }
+    
+                .thumbs-up-rating {
+                    background-color: $opaque-primary-blue;
+                    justify-content: flex-start;
+                }
+    
+                .thumbs-down-rating {
+                    background-color: $opaque-primary-yellow;
+                    justify-content: flex-end;
+                }
+            }
+    
+    
+            &.kanye {
+                background-image: url("../../images/kanye2.jpg");
+    
+                .card-rating {
+                    .thumbs-up-rating {
+                        width: 64%;
+                    }
+    
+                    .thumbs-down-rating {
+                        width: 36%;
+                    }
+                }
+            }
+    
+            &.cris {
+                background-image: url("../../images/cris2.jpg");
+    
+                .card-rating {
+                    .thumbs-up-rating {
+                        width: 36%;
+                    }
+    
+                    .thumbs-down-rating {
+                        width: 64%;
+                    }
+                }
+            }
+    
+        }
+    }
+
+}
+
+.icon {
+    font-size: 1.5rem;
+}

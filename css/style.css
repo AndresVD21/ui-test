@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.header-section {
+  background-image: url("../../images/pope.jfif");
+  background-position: top center;
+}
+.header-section .nav {
+  display: flex;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+.header-section .nav .page-title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.header-section .nav .page-title .no-capital {
+  text-transform: lowercase;
+}
+.header-section .nav .nav-list {
+  list-style: none;
+  text-align: center;
+}
+.header-section .nav .nav-list .list-item {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+.header-section .nav .nav-list .list-item .search-icon {
+  font-size: 1.5rem;
+}
+.header-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+.header-section .container .info-card {
+  width: 70%;
+}
+.header-section .container .info-card .info-card-content {
+  padding: 2em;
+  color: #fff;
+  backdrop-filter: blur(20px);
+}
+.header-section .container .info-card .info-card-content .info-card-title {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+}
+.header-section .container .info-card .info-card-content small {
+  font-weight: 100;
+  font-size: 1rem;
+}
+.header-section .container .info-card .info-card-content .info-card-text {
+  line-height: 1.5;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+}
+.header-section .container .info-card .info-card-content .more-info {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  margin-top: 1em;
+  margin-bottom: 1.5rem;
+}
+.header-section .container .info-card .info-card-content .more-info a {
+  color: inherit;
+}
+.header-section .container .info-card .thumbs {
+  width: 100%;
+  display: flex;
+}
+.header-section .container .info-card .thumbs .thumbs-up,
+.header-section .container .info-card .thumbs .thumbs-down {
+  width: 50%;
+  margin: 0;
+  background: none;
+  border: none;
+  padding: 1em 1.5em;
+  color: #fff;
+}
+.header-section .container .info-card .thumbs .thumbs-up i,
+.header-section .container .info-card .thumbs .thumbs-down i {
+  font-size: 2rem;
+}
+.header-section .container .info-card .thumbs .thumbs-up {
+  background-color: rgba(44, 186, 179, 0.8);
+}
+.header-section .container .info-card .thumbs .thumbs-down {
+  background-color: rgba(255, 181, 51, 0.8);
+}
+.header-section .closing-details {
+  display: flex;
+}
+.header-section .closing-details .closing-in {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 1em;
+  position: relative;
+}
+.header-section .closing-details .closing-in small {
+  text-transform: uppercase;
+}
+.header-section .closing-details .closing-in::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid rgba(0, 0, 0, 0.4);
+  position: absolute;
+  right: -7px;
+}
+.header-section .closing-details .closing-days {
+  width: 70%;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 0 0.5em;
+}
+.header-section .closing-details .closing-days .number {
+  margin-right: 0.3em;
+  font-weight: 700;
+}
+
+.voting-section {
+  padding: 2em 0;
+  width: 80%;
+  margin: 0 auto;
+}
+.voting-section .announce {
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1em;
+  color: rgba(0, 0, 0, 0.7);
+}
+.voting-section .announce .left p {
+  font-size: 1.5rem;
+}
+.voting-section .announce .left strong h1 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+.voting-section .voting-title {
+  margin: 0.3em 0;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+}
+.voting-section .voting-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.voting-section .voting-grid .card {
+  color: #fff;
+  min-height: 400px;
+  background-position: left center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+.voting-section .voting-grid .card .card-container .card-title {
+  display: flex;
+  align-items: center;
+}
+.voting-section .voting-grid .card .card-container .card-title .calification {
+  padding: 0.5em 0.6em;
+  color: #fff;
+  margin-right: 1em;
+}
+.voting-section .voting-grid .card .card-container .card-title .calification.good {
+  background-color: #2cbab3;
+}
+.voting-section .voting-grid .card .card-container .card-title .calification.bad {
+  background-color: #ffb533;
+}
+.voting-section .voting-grid .card .card-container .card-title .card-name {
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+.voting-section .voting-grid .card .card-container .card-content {
+  padding: 0 3.5em 3.5em 3.5em;
+}
+.voting-section .voting-grid .card .card-container .card-content .card-information {
+  margin-bottom: 1.2em;
+}
+.voting-section .voting-grid .card .card-container .card-content .card-description {
+  font-size: 1.3rem;
+}
+.voting-section .voting-grid .card .card-container .card-content .card-actions {
+  padding: 1.2em 0;
+}
+.voting-section .voting-grid .card .card-container .card-content .card-actions .btn {
+  background-color: transparent;
+  border: none;
+  padding: 0.3em 0.4em;
+  color: #fff;
+}
+.voting-section .voting-grid .card .card-container .card-content .card-actions .btn + .btn {
+  margin-left: 0.5em;
+}
+.voting-section .voting-grid .card .card-container .card-content .card-actions .btn.active {
+  border: 2px solid #fff;
+}
+.voting-section .voting-grid .card .card-container .card-content .card-actions .btn.thumbs-up {
+  background-color: #2cbab3;
+}
+.voting-section .voting-grid .card .card-container .card-content .card-actions .btn.thumbs-down {
+  background-color: #ffb533;
+}
+.voting-section .voting-grid .card .card-container .card-content .card-actions .btn.btn-vote {
+  border: 1px solid #fff;
+  padding: 1em 1.5em;
+}
+.voting-section .voting-grid .card .card-rating {
+  display: flex;
+  width: 100%;
+}
+.voting-section .voting-grid .card .card-rating .thumbs-up-rating,
+.voting-section .voting-grid .card .card-rating .thumbs-down-rating {
+  padding: 0.5em;
+  font-size: 2rem;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+.voting-section .voting-grid .card .card-rating .thumbs-up-rating .icon,
+.voting-section .voting-grid .card .card-rating .thumbs-down-rating .icon {
+  font-size: 2rem;
+}
+.voting-section .voting-grid .card .card-rating .thumbs-up-rating {
+  background-color: rgba(44, 186, 179, 0.8);
+  justify-content: flex-start;
+}
+.voting-section .voting-grid .card .card-rating .thumbs-down-rating {
+  background-color: rgba(255, 181, 51, 0.8);
+  justify-content: flex-end;
+}
+.voting-section .voting-grid .card.kanye {
+  background-image: url("../../images/kanye2.jpg");
+}
+.voting-section .voting-grid .card.kanye .card-rating .thumbs-up-rating {
+  width: 64%;
+}
+.voting-section .voting-grid .card.kanye .card-rating .thumbs-down-rating {
+  width: 36%;
+}
+.voting-section .voting-grid .card.cris {
+  background-image: url("../../images/cris2.jpg");
+}
+.voting-section .voting-grid .card.cris .card-rating .thumbs-up-rating {
+  width: 36%;
+}
+.voting-section .voting-grid .card.cris .card-rating .thumbs-down-rating {
+  width: 64%;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.ml-1 {
+  margin-left: 1em;
+}
+
+.mr-1 {
+  margin-right: 1em;
+}
+
+/*# sourceMappingURL=style.css.map */

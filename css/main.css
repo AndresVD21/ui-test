@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7; }
+
+.header-section {
+  background-image: url("../../images/pope.jfif");
+  background-position: top center;
+  padding: 1em; }
+  .header-section .nav {
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.7);
+    justify-content: center;
+    align-items: center;
+    padding: 1em; }
+    .header-section .nav .page-title {
+      font-size: 2rem;
+      text-transform: capitalize;
+      font-weight: 400; }
+      .header-section .nav .page-title .no-capital {
+        text-transform: lowercase; }
+    .header-section .nav .nav-list {
+      list-style: none;
+      text-align: center; }
+      .header-section .nav .nav-list .list-item {
+        text-transform: capitalize;
+        font-size: 1.5rem; }
+        .header-section .nav .nav-list .list-item .search-icon {
+          font-size: 1.5rem; }
+  .header-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .header-section .container .info-card {
+      width: 70%; }
+      .header-section .container .info-card .info-card-content {
+        padding: 2em;
+        color: white;
+        backdrop-filter: blur(20px); }
+        .header-section .container .info-card .info-card-content .info-card-title {
+          font-size: 3rem;
+          font-weight: 400;
+          line-height: 1;
+          margin-bottom: .5em;
+          letter-spacing: 1px; }
+        .header-section .container .info-card .info-card-content small {
+          font-weight: 100;
+          font-size: 1rem; }
+        .header-section .container .info-card .info-card-content .info-card-text {
+          line-height: 1.5;
+          font-weight: 300; }
