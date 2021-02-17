@@ -5,7 +5,13 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    
+    apiKey: "AIzaSyDSPFZc6-DqOIIDoXmXMBH3IGfsoCMdL8g",
+    authDomain: "voting-app-c3aef.firebaseapp.com",
+    projectId: "voting-app-c3aef",
+    storageBucket: "voting-app-c3aef.appspot.com",
+    messagingSenderId: "402916050303",
+    appId: "1:402916050303:web:332d11a4c063528166c64a",
+    measurementId: "G-XKB3WY5LKL"
   }
 };
 
