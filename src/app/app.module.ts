@@ -12,20 +12,16 @@ import { CardComponent } from './components/voting/card/card.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderArticleComponent,
-    VotingComponent,
-    NavigationComponent,
-    ArticleContentComponent,
-    CardComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
+    CoreModule,
     ToastrModule.forRoot({
       positionClass :'toast-top-right'
     }),
