@@ -50,6 +50,13 @@ body {
   text-transform: capitalize;
   font-size: 1.5rem;
 }
+.header-section .nav .nav-list .list-item a {
+  text-decoration: none;
+  color: #fff;
+}
+.header-section .nav .nav-list .list-item a:visited {
+  color: #fff;
+}
 .header-section .nav .nav-list .list-item .search-icon {
   font-size: 1.5rem;
 }

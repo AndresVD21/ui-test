@@ -32,12 +32,19 @@
             .list-item {
                 text-transform: capitalize;
                 font-size: 1.5rem;
+                a {
+                    text-decoration: none;
+                    color: #fff;
+
+                    &:visited {
+                        color: #fff;
+                    }
+                }
 
                 .search-icon {
                     font-size: 1.5rem;
                 }
             }
-
         }
     }
 
@@ -60,7 +67,7 @@
                     font-size: 3rem;
                     font-weight: 400;
                     line-height: 1;
-                    margin-bottom: .5em;
+                    margin-bottom: 0.5em;
                     letter-spacing: 1px;
                 }
 
@@ -76,8 +83,8 @@
                 }
 
                 .more-info {
-                    color: rgba(#fff, 0.7);;
-                    font-size: .8rem;
+                    color: rgba(#fff, 0.7);
+                    font-size: 0.8rem;
                     margin-top: 1em;
                     margin-bottom: 1.5rem;
 
@@ -85,7 +92,6 @@
                         color: inherit;
                     }
                 }
-
             }
             .thumbs {
                 width: 100%;
@@ -151,10 +157,10 @@
             background-color: rgba(#fff, 0.8);
             font-size: 2rem;
             color: rgba(#000, 0.7);
-            padding: 0 .5em;
+            padding: 0 0.5em;
 
             .number {
-                margin-right: .3em;
+                margin-right: 0.3em;
                 font-weight: 700;
             }
         }
