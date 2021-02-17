@@ -10,6 +10,8 @@ import { NavigationComponent } from './components/header-article/navigation/navi
 import { ArticleContentComponent } from './components/header-article/article-content/article-content.component';
 import { CardComponent } from './components/voting/card/card.component';
 import { ToastrModule } from 'ngx-toastr';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { ToastrModule } from 'ngx-toastr';
     ToastrModule.forRoot({
       positionClass :'toast-top-right'
     }),
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

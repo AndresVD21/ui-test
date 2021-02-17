@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { Candidate } from 'src/app/models/candidate';
 
@@ -10,6 +10,7 @@ import { Candidate } from 'src/app/models/candidate';
 export class CardComponent implements OnInit {
 
   @Input() candidate: Candidate;
+  @Output() submitVoteEmitter = new EventEmitter<Candidate>();
 
   mediaUrl: string = '../../../assets/images/';
 
@@ -29,23 +30,23 @@ export class CardComponent implements OnInit {
   }
 
   calculatePercentages() {
-    let totalVotes = this.candidate.thubmsUp + this.candidate.thumbsDown;
-    let thubmsUp = this.candidate.thubmsUp;
+    let totalVotes = this.candidate.thumbsUp + this.candidate.thumbsDown;
+    let thumbsUp = this.candidate.thumbsUp;
     let thubmsDown = this.candidate.thumbsDown;
-    this.thumbsUpPercentaje = Math.ceil(thubmsUp * 100 / totalVotes);
+    this.thumbsUpPercentaje = Math.ceil(thumbsUp * 100 / totalVotes);
     this.thumbsDownPercentaje = Math.ceil(thubmsDown * 100 / totalVotes);
   }
 
   moreGoodOpinions() {
-    return this.candidate.thubmsUp > this.candidate.thumbsDown;
+    return this.candidate.thumbsUp > this.candidate.thumbsDown;
   }
 
   moreBadOpinions() {
-    return this.candidate.thubmsUp < this.candidate.thumbsDown;
+    return this.candidate.thumbsUp < this.candidate.thumbsDown;
   }
 
   opinionsAreEven() {
-    return this.candidate.thubmsUp === this.candidate.thumbsDown;
+    return this.candidate.thumbsUp === this.candidate.thumbsDown;
   }
 
   setVoteOption(option: string) {
@@ -59,14 +60,16 @@ export class CardComponent implements OnInit {
   submitVote() {
 
     if (this.isVoteOptionGood()) {
-      this.candidate.thubmsUp+=1;
+      this.candidate.thumbsUp+=1;
     } else {
       this.candidate.thumbsDown+=1;
     }
 
+    this.submitVoteEmitter.emit(this.candidate)
+
     this.toastr.success('Thank you for voting!');
 
-    this.calculatePercentages();
+    // this.calculatePercentages();
 
     this.hasVoted = true;
     this.voteOptionSelection = '';

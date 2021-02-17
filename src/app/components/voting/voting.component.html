@@ -10,7 +10,7 @@
     </div>
     <h1 class="voting-title">Votes</h1>
     <main class="voting-grid">
-        <card *ngFor="let candidate of candidates" [candidate]="candidate"></card>
+        <card *ngFor="let candidate of candidates" [candidate]="candidate" (submitVoteEmitter)="submitVote($event)"></card>
     </main>
     <div class="add-other">
         <h2 class="add-other-text">Is there anyone else you want us to add?</h2>

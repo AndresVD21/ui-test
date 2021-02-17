@@ -1,17 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Candidate } from '../models/candidate';
-import { MockData } from '../models/mock-data';
+// import { MockData } from '../models/mock-data';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VotingService {
 
-  constructor() { }
+  constructor(
+    private firestore: AngularFirestore
+  ) { }
 
-  getCandidates(): Observable<Candidate[]> {
-    return of(MockData)
+  getCandidates() {
+    return this.firestore.collection<Candidate>('candidates').snapshotChanges();
+    // return of(MockData)
+  }
+
+  addVoteToCandidate(id: string, data: Candidate) {
+    return this.firestore.collection('candidates').doc(id).set(data);
   }
   
 }
