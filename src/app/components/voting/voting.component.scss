@@ -160,6 +160,10 @@
             grid-template-columns: 1fr 1fr;
         }
 
+        .loading {
+            font-size: 2rem;
+        }
+
         .add-other {
             flex-direction: row;
             align-items: center;

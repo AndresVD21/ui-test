@@ -17,7 +17,7 @@ export class CardComponent implements OnInit {
   thumbsUpPercentaje: number;
   thumbsDownPercentaje: number;
 
-  voteOptionSelection: string = '';
+  voteOptionSelection: string = null;
 
   hasVoted: boolean = false;
 
@@ -59,20 +59,24 @@ export class CardComponent implements OnInit {
 
   submitVote() {
 
-    if (this.isVoteOptionGood()) {
-      this.candidate.thumbsUp+=1;
+    if (this.voteOptionSelection) {
+      if (this.isVoteOptionGood()) {
+        this.candidate.thumbsUp+=1;
+      } else {
+        this.candidate.thumbsDown+=1;
+      }
+  
+      this.submitVoteEmitter.emit(this.candidate)
+  
+      this.toastr.success('Thank you for voting!');
+  
+      // this.calculatePercentages();
+  
+      this.hasVoted = true;
+      this.voteOptionSelection = null;
     } else {
-      this.candidate.thumbsDown+=1;
+      this.toastr.warning('Please select an option');
     }
-
-    this.submitVoteEmitter.emit(this.candidate)
-
-    this.toastr.success('Thank you for voting!');
-
-    // this.calculatePercentages();
-
-    this.hasVoted = true;
-    this.voteOptionSelection = '';
   }
 
   voteAgain() {

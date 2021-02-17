@@ -9,9 +9,12 @@
         </div>
     </div>
     <h1 class="voting-title">Votes</h1>
-    <main class="voting-grid">
+    <main class="voting-grid" *ngIf="candidates.length > 0">
         <card *ngFor="let candidate of candidates" [candidate]="candidate" (submitVoteEmitter)="submitVote($event)"></card>
     </main>
+    <ng-container *ngIf="candidates.length === 0">
+        <p class="loading">Loading candidates...</p>
+    </ng-container>
     <div class="add-other">
         <h2 class="add-other-text">Is there anyone else you want us to add?</h2>
         <button class="btn btn-submit-other">Submit a Name</button>
