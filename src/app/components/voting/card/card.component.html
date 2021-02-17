@@ -1,0 +1,40 @@
+<div class="card" [style.backgroundImage]="'url('+mediaUrl+candidate.img+')'">
+    <div class="card-container">
+        <div class="card-title">
+            <span class="calification" [ngClass]="{'good': moreGoodOpinions(), 'bad': moreBadOpinions(), 'even': opinionsAreEven()}">
+                <i class="icon fas fa-thumbs-up" *ngIf="moreGoodOpinions()"></i>
+                <i class="icon fas fa-thumbs-down fa-flip-horizontal" *ngIf="moreBadOpinions()"></i>
+                <i class="fas fa-equals" *ngIf="opinionsAreEven()"></i>
+            </span>
+            <h2 class="card-name">{{candidate.firstName}} {{candidate.lastName}}</h2>
+        </div>
+        <div class="card-content">
+            <p class="card-information">
+                <strong>{{candidate.inSectorSince}}</strong> in {{candidate.sector}}
+            </p>
+            <p class="card-description">
+                {{candidate.description}}
+            </p>
+            <div class="card-actions">
+                <ng-container *ngIf="!hasVoted">
+                    <button class="btn thumbs-up" [ngClass]="{'active': voteOptionSelection === 'good'}" (click)="setVoteOption('good')"><i class="icon fas fa-thumbs-up"></i></button>
+                    <button class="btn thumbs-down" [ngClass]="{'active': voteOptionSelection === 'bad'}" (click)="setVoteOption('bad')"><i class="icon fas fa-thumbs-down fa-flip-horizontal"></i></button>
+                    <button class="btn btn-vote" (click)="submitVote()">Vote now</button>
+                </ng-container>
+                <ng-container *ngIf="hasVoted">
+                    <button class="btn btn-vote" (click)="voteAgain()">Vote again</button>
+                </ng-container>
+            </div>
+        </div>
+        <div class="card-rating">
+            <div class="thumbs-up-rating" [style.width.%]="thumbsUpPercentaje">
+                <i class="icon fas fa-thumbs-up mr-1"></i>
+                {{thumbsUpPercentaje}}%
+            </div>
+            <div class="thumbs-down-rating" [style.width.%]="thumbsDownPercentaje">
+                {{thumbsDownPercentaje}}%
+                <i class="icon fas fa-thumbs-down fa-flip-horizontal ml-1"></i>
+            </div>
+        </div>
+    </div>
+</div>

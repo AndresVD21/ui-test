@@ -1,0 +1,8 @@
+import { Candidate } from "./candidate";
+
+export const MockData: Candidate[] = [
+    { firstName: 'Kayne', lastName: 'West', sector: 'Entertainment', inSectorSince: '1 month ago', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam reprehenderit ipsum ut. Illo exercitationem debitis, fugiat eligendi cupiditate dicta, error quaerat ea voluptatem ab, eveniet mollitia. Dolorum eveniet fugit harum!', thubmsUp: 77, thumbsDown: 43, img: 'kanye2.jpg' },
+    { firstName: 'Mark', lastName: 'Zuckerberg', sector: 'Business', inSectorSince: '1 month ago', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dolorum accusamus expedita deleniti excepturi, nobis praesentium consectetur illum eum temporibus repudiandae provident consequuntur! Officia quia libero exercitationem pariatur odit molestiae.', thubmsUp: 36, thumbsDown: 64, img: "mark2.jpg" },
+    { firstName: 'Cristina', lastName: 'Fernández de Kirchner', sector: 'Politics', inSectorSince: '1 month ago', description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati facilis, corporis ut quasi aspernatur repellendus at, voluptatem cumque magnam repellat inventore corrupti dicta aperiam adipisci assumenda velit. Quae, sequi vel?', thubmsUp: 30, thumbsDown: 55, img: 'cris2.jpg' },
+    { firstName: 'Elon', lastName: 'Musk', sector: 'Business', inSectorSince: '1 month ago', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quasi esse, deleniti, qui facilis nam nihil ullam porro consequatur suscipit sint deserunt optio corporis accusantium, dignissimos obcaecati asperiores dolor tempore.', thubmsUp: 50, thumbsDown: 50, img: 'elon.jpg' },
+]

@@ -1,0 +1,41 @@
+<section class="voting-section">
+    <div class="announce">
+        <div class="left">
+            <p>Speak out. Be heard.</p>
+            <strong><h1>Be counted</h1></strong>
+        </div>
+        <div class="right">
+            <p>Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It's easy: You share your opinion, we analyze and put the data in a public report</p>
+        </div>
+    </div>
+    <h1 class="voting-title">Votes</h1>
+    <main class="voting-grid">
+        <card *ngFor="let candidate of candidates" [candidate]="candidate"></card>
+    </main>
+    <div class="add-other">
+        <h2 class="add-other-text">Is there anyone else you want us to add?</h2>
+        <button class="btn btn-submit-other">Submit a Name</button>
+    </div>
+    <footer class="footer">
+        <ul class="links">
+            <li class="link">
+                <a href="#">Terms and Conditions</a>
+            </li>
+            <li class="link">
+                <a href="#">Privacy Policy</a>
+            </li>
+            <li class="link">
+                <a href="#">Contact Us</a>
+            </li>
+        </ul>
+        <div class="social-media">
+            <p>Follow Us</p>
+            <a href="#">
+                <i class="icon fab fa-facebook-square"></i>
+            </a>
+            <a href="#">
+                <i class="icon fab fa-twitter"></i>
+            </a>
+        </div>
+    </footer>
+</section>

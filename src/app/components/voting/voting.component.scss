@@ -1,0 +1,205 @@
+@import "../../../assets/scss/abstracts/variables";
+
+.voting-section {
+    padding: 2em 0;
+    width: 80%;
+    margin: 0 auto;
+
+    .announce {
+        background-color: $light-grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 1em;
+        color: $opaque-black;
+
+        .left {
+            p {
+                font-size: 1.5rem;
+            }
+            strong h1 {
+                font-weight: 900;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .voting-title {
+        margin: 0.3em 0;
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 400;
+        color: $opaque-black;
+    }
+
+    .voting-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .add-other {
+        display: flex;
+        flex-direction: column;
+        margin: 2.5em 0;
+        background-color: lightgray;
+        // background-image: linear-gradient(black, black), url("../../images/banner.jpg");
+        // background-size: cover;
+        // background-blend-mode: saturation;
+        padding: 1em 2em;
+
+        .add-other-text {
+            font-size: 2rem;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .btn-submit-other {
+            background-color: transparent;
+            border: 2px solid #000;
+            font-size: 1.5rem;
+            padding: 0.8em 2em;
+            font-weight: 700;
+        }
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // border-top: 1px dotted gray;
+
+        padding: 2em;
+
+        background-image: linear-gradient(to right, darkgray 33%, rgba(255, 255, 255, 0) 0%);
+        background-position: top;
+        background-size: 5px 1px;
+        background-repeat: repeat-x;
+
+        .links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .link {
+                & + .link {
+                    margin-left: 1em;
+                }
+                a {
+                    text-decoration: none;
+                    color: #000;
+                    font-size: 1.2rem;
+
+                    &:hover {
+                        color: rgba(#000, 0.7);
+                    }
+                }
+            }
+        }
+        .social-media {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1em;
+
+            .icon + .icon {
+                margin-left: 1em;
+            }
+
+            p {
+                // font-size: 1.2rem;
+                display: none;
+            }
+
+            a {
+                color: #000;
+            }
+
+            .icon {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 750px) {
+    .voting-section {
+        .announce {
+            flex-direction: row;
+            text-align: initial;
+            align-items: center;
+            padding: 1em 2em;
+
+            .left {
+                width: 30%;
+                margin-right: 0.5em;
+
+                p {
+                    font-size: 1.4rem;
+                }
+
+                h1 {
+                    line-height: 1;
+                }
+            }
+
+            .right {
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .voting-title {
+            text-align: initial;
+        }
+
+        .voting-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .add-other {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .add-other-text {
+                font-size: 2.5rem;
+                text-align: initial;
+            }
+
+            .btn-submit-other {
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgba(#000, 0.2);
+                }
+            }
+        }
+
+        .footer {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .social-media {
+                p {
+                    display: block;
+                }
+
+                a {
+                    &:hover,
+                    &:focus {
+                        opacity: 0.8;
+                    }
+                }
+
+                .icon {
+                    margin-left: 1em;
+                }
+            }
+        }
+    }
+}

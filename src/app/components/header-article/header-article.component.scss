@@ -1,0 +1,63 @@
+.header-section {
+    // min-height: 400px;
+    // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url("../../images/pope2.jpg");
+    background-image: url("../../../assets/images/pope2.jpg");
+    background-size: cover;
+    background-position: top center;
+
+    .closing-details {
+        display: flex;
+
+        .closing-in {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 30%;
+            background-color: rgba(#000, 0.3);
+            color: #fff;
+            padding: 1em;
+            position: relative;
+
+            small {
+                text-transform: uppercase;
+            }
+
+            // &::after {
+            //     content: '';
+            //     width: 0;
+            //     height: 0;
+            //     border-top: 7px solid transparent;
+            //     border-bottom: 7px solid transparent;
+            //     border-left: 7px solid rgba(#000, 0.4);
+            //     position: absolute;
+            //     right: -7px;
+            // }
+        }
+
+        .closing-days {
+            width: 70%;
+            display: flex;
+            background-color: rgba(#fff, 0.8);
+            font-size: 2rem;
+            color: rgba(#000, 0.7);
+            padding: 0 .5em;
+
+            .number {
+                margin-right: .3em;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media (min-width: 750px) {
+    .header-section {
+        .closing-details {
+            .closing-in {
+                small {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
