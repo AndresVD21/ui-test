@@ -14,8 +14,8 @@ export class CardComponent implements OnInit {
 
   mediaUrl: string = '../../../assets/images/';
 
-  thumbsUpPercentaje: number;
-  thumbsDownPercentaje: number;
+  thumbsUpPercentage: number;
+  thumbsDownPercentage: number;
 
   voteOptionSelection: string = null;
 
@@ -33,8 +33,8 @@ export class CardComponent implements OnInit {
     let totalVotes = this.candidate.thumbsUp + this.candidate.thumbsDown;
     let thumbsUp = this.candidate.thumbsUp;
     let thubmsDown = this.candidate.thumbsDown;
-    this.thumbsUpPercentaje = Math.ceil(thumbsUp * 100 / totalVotes);
-    this.thumbsDownPercentaje = Math.ceil(thubmsDown * 100 / totalVotes);
+    this.thumbsUpPercentage = Math.ceil(thumbsUp * 100 / totalVotes);
+    this.thumbsDownPercentage = Math.ceil(thubmsDown * 100 / totalVotes);
   }
 
   moreGoodOpinions() {
