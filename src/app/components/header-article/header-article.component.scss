@@ -1,6 +1,4 @@
 .header-section {
-    // min-height: 400px;
-    // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url("../../images/pope2.jpg");
     background-image: url("../../../assets/images/pope2.jpg");
     background-size: cover;
     background-position: center center;
@@ -21,17 +19,6 @@
             small {
                 text-transform: uppercase;
             }
-
-            // &::after {
-            //     content: '';
-            //     width: 0;
-            //     height: 0;
-            //     border-top: 7px solid transparent;
-            //     border-bottom: 7px solid transparent;
-            //     border-left: 7px solid rgba(#000, 0.4);
-            //     position: absolute;
-            //     right: -7px;
-            // }
         }
 
         .closing-days {
@@ -50,7 +37,7 @@
     }
 }
 
-@media (min-width: 750px) {
+@media (min-width: 1000px) {
     .header-section {
         .closing-details {
             .closing-in {

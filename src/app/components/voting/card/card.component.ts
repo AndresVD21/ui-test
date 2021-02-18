@@ -58,7 +58,6 @@ export class CardComponent implements OnInit {
   }
 
   submitVote() {
-
     if (this.voteOptionSelection) {
       if (this.isVoteOptionGood()) {
         this.candidate.thumbsUp+=1;
@@ -68,10 +67,7 @@ export class CardComponent implements OnInit {
   
       this.submitVoteEmitter.emit(this.candidate)
   
-      this.toastr.success('Thank you for voting!');
-  
-      // this.calculatePercentages();
-  
+      this.toastr.success('Thank you for voting!');  
       this.hasVoted = true;
       this.voteOptionSelection = null;
     } else {

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Candidate } from '../models/candidate';
-// import { MockData } from '../models/mock-data';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
@@ -15,7 +14,6 @@ export class VotingService {
 
   getCandidates() {
     return this.firestore.collection<Candidate>('candidates').snapshotChanges();
-    // return of(MockData)
   }
 
   addVoteToCandidate(id: string, data: Candidate) {

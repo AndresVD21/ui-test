@@ -2,9 +2,7 @@
 
 .card {
     color: #fff;
-    // width: 70%;
     min-height: 400px;
-    min-width: 330px;
     background-position: left center;
     background-size: cover;
     display: flex;
@@ -79,7 +77,7 @@
 
                     &.btn-vote {
                         border: 1px solid #fff;
-                        padding: .7em 1.5em;
+                        padding: 0.7em 1.5em;
                     }
                 }
             }
@@ -116,7 +114,11 @@
     }
 }
 
-@media (min-width: 750px) {
+@media (min-width: 1000px) {
+    .card {
+        min-width: 330px;
+    }
+
     .btn {
         &:hover,
         &:focus {
@@ -127,13 +129,4 @@
             }
         }
     }
-    // .card {
-    //     .card-container {
-    //         .card-content {
-    //             .card-actions {
-    //             }
-    //         }
-    //     }
-    // }
 }
-
